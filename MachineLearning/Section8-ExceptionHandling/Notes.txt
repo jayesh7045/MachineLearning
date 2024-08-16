@@ -1,0 +1,9 @@
+Exception Handling in python allows us to handle errors more gracefully and take corrective actions
+without stopping the execution of the program. 
+Exceptions are the errors that occur during the execution of the program and exception are the events that disrupt the execution of the program
+Common exceptions include
+1) divide by zero
+2) sql exception
+3) File not found
+4) Value error
+5) Type error
