@@ -1,0 +1,1 @@
+a = b # This line will give us the nameError which is a type of Exception
