@@ -1,0 +1,2 @@
+Encapsulation is a concept of wrapping up the data(variables) and the methods(functions) in a single unit. It restricts to direct access to some of the components
+which is mean of preventing the misuse of data
