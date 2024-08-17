@@ -1,0 +1,1 @@
+As there is an interface in Java, Similarly there is an Abstract Base Class in python
