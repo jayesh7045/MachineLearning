@@ -1,0 +1,203 @@
+Operator overloading in Python allows you to define how operators behave when applied to objects of your custom classes. This is done by defining special methods, often referred to as "magic methods" or "dunder methods" (short for "double underscore"), in your class. These methods are automatically invoked when you use operators with instances of your class.
+
+Here’s a more detailed explanation and some additional magic methods:
+
+### 1. **Equality and Comparison Operators**
+
+   - **`__eq__(self, other)`**:
+     - Checks if two objects are equal using the `==` operator.
+     - Example: `a == b` calls `a.__eq__(b)`.
+
+   - **`__ne__(self, other)`**:
+     - Checks if two objects are not equal using the `!=` operator.
+     - Example: `a != b` calls `a.__ne__(b)`.
+
+   - **`__lt__(self, other)`**:
+     - Less than, used with `<`.
+     - Example: `a < b` calls `a.__lt__(b)`.
+
+   - **`__le__(self, other)`**:
+     - Less than or equal to, used with `<=`.
+     - Example: `a <= b` calls `a.__le__(b)`.
+
+   - **`__gt__(self, other)`**:
+     - Greater than, used with `>`.
+     - Example: `a > b` calls `a.__gt__(b)`.
+
+   - **`__ge__(self, other)`**:
+     - Greater than or equal to, used with `>=`.
+     - Example: `a >= b` calls `a.__ge__(b)`.
+
+### 2. **Arithmetic Operators**
+
+   - **`__add__(self, other)`**:
+     - Addition, used with `+`.
+     - Example: `a + b` calls `a.__add__(b)`.
+
+   - **`__sub__(self, other)`**:
+     - Subtraction, used with `-`.
+     - Example: `a - b` calls `a.__sub__(b)`.
+
+   - **`__mul__(self, other)`**:
+     - Multiplication, used with `*`.
+     - Example: `a * b` calls `a.__mul__(b)`.
+
+   - **`__truediv__(self, other)`**:
+     - True division, used with `/`.
+     - Example: `a / b` calls `a.__truediv__(b)`.
+
+   - **`__floordiv__(self, other)`**:
+     - Floor division, used with `//`.
+     - Example: `a // b` calls `a.__floordiv__(b)`.
+
+   - **`__mod__(self, other)`**:
+     - Modulo, used with `%`.
+     - Example: `a % b` calls `a.__mod__(b)`.
+
+   - **`__pow__(self, other)`**:
+     - Exponentiation, used with `**`.
+     - Example: `a ** b` calls `a.__pow__(b)`.
+
+   - **`__neg__(self)`**:
+     - Unary negation, used with `-` (negates the value).
+     - Example: `-a` calls `a.__neg__()`.
+
+### 3. **In-Place Arithmetic Operators**
+
+   - **`__iadd__(self, other)`**:
+     - In-place addition, used with `+=`.
+     - Example: `a += b` calls `a.__iadd__(b)`.
+
+   - **`__isub__(self, other)`**:
+     - In-place subtraction, used with `-=`.
+     - Example: `a -= b` calls `a.__isub__(b)`.
+
+   - **`__imul__(self, other)`**:
+     - In-place multiplication, used with `*=`.
+     - Example: `a *= b` calls `a.__imul__(b)`.
+
+   - **`__itruediv__(self, other)`**:
+     - In-place true division, used with `/=`.
+     - Example: `a /= b` calls `a.__itruediv__(b)`.
+
+   - **`__ifloordiv__(self, other)`**:
+     - In-place floor division, used with `//=`.
+     - Example: `a //= b` calls `a.__ifloordiv__(b)`.
+
+   - **`__imod__(self, other)`**:
+     - In-place modulo, used with `%=`.
+     - Example: `a %= b` calls `a.__imod__(b)`.
+
+   - **`__ipow__(self, other)`**:
+     - In-place exponentiation, used with `**=`.
+     - Example: `a **= b` calls `a.__ipow__(b)`.
+
+### 4. **Unary Operators**
+
+   - **`__pos__(self)`**:
+     - Unary positive, used with `+`.
+     - Example: `+a` calls `a.__pos__()`.
+
+   - **`__abs__(self)`**:
+     - Absolute value, used with `abs()`.
+     - Example: `abs(a)` calls `a.__abs__()`.
+
+   - **`__invert__(self)`**:
+     - Bitwise inversion, used with `~`.
+     - Example: `~a` calls `a.__invert__()`.
+
+### 5. **Bitwise Operators**
+
+   - **`__and__(self, other)`**:
+     - Bitwise AND, used with `&`.
+     - Example: `a & b` calls `a.__and__(b)`.
+
+   - **`__or__(self, other)`**:
+     - Bitwise OR, used with `|`.
+     - Example: `a | b` calls `a.__or__(b)`.
+
+   - **`__xor__(self, other)`**:
+     - Bitwise XOR, used with `^`.
+     - Example: `a ^ b` calls `a.__xor__(b)`.
+
+   - **`__lshift__(self, other)`**:
+     - Bitwise left shift, used with `<<`.
+     - Example: `a << b` calls `a.__lshift__(b)`.
+
+   - **`__rshift__(self, other)`**:
+     - Bitwise right shift, used with `>>`.
+     - Example: `a >> b` calls `a.__rshift__(b)`.
+
+### 6. **Type Conversion Operators**
+
+   - **`__int__(self)`**:
+     - Converts the object to an integer, used with `int()`.
+     - Example: `int(a)` calls `a.__int__()`.
+
+   - **`__float__(self)`**:
+     - Converts the object to a float, used with `float()`.
+     - Example: `float(a)` calls `a.__float__()`.
+
+   - **`__str__(self)`**:
+     - Converts the object to a string, used with `str()`.
+     - Example: `str(a)` calls `a.__str__()`.
+
+   - **`__repr__(self)`**:
+     - Returns a string representation of the object, typically used for debugging.
+     - Example: `repr(a)` calls `a.__repr__()`.
+
+### 7. **Customizing Object Behavior**
+
+   - **`__getitem__(self, key)`**:
+     - Used to retrieve an item from an object using the `[]` notation.
+     - Example: `a[key]` calls `a.__getitem__(key)`.
+
+   - **`__setitem__(self, key, value)`**:
+     - Used to set an item in an object using the `[]` notation.
+     - Example: `a[key] = value` calls `a.__setitem__(key, value)`.
+
+   - **`__delitem__(self, key)`**:
+     - Used to delete an item from an object using the `[]` notation.
+     - Example: `del a[key]` calls `a.__delitem__(key)`.
+
+   - **`__len__(self)`**:
+     - Returns the length of the object, used with `len()`.
+     - Example: `len(a)` calls `a.__len__()`.
+
+   - **`__call__(self, *args, **kwargs)`**:
+     - Makes an instance callable like a function.
+     - Example: `a(*args, **kwargs)` calls `a.__call__(*args, **kwargs)`.
+
+### Example of Operator Overloading in a Class
+
+Here’s a simple example to demonstrate operator overloading in a custom class:
+
+```python
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return Vector(self.x - other.x, self.y - other.y)
+
+    def __mul__(self, scalar):
+        return Vector(self.x * scalar, self.y * scalar)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+# Example usage
+v1 = Vector(2, 3)
+v2 = Vector(1, 4)
+v3 = v1 + v2  # Calls __add__
+v4 = v1 * 3   # Calls __mul__
+
+print(v3)  # Output: Vector(3, 7)
+print(v

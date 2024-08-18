@@ -1,0 +1,1 @@
+Generators in Python are special functions that use the yield keyword to produce values one at a time, pausing between each. They are memory-efficient, as they generate values on-demand rather than storing them all at once.
