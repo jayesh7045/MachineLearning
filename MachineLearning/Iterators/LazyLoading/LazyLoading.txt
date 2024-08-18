@@ -1,0 +1,33 @@
+### Lazy Loading: General Concept
+
+**Lazy loading** is a design pattern used to defer the initialization of an object or the loading of data until it is actually needed. This approach helps in optimizing resource usage, such as memory and processing power, by only performing operations when required.
+
+- **Example:** In web development, images on a webpage might only be loaded when they come into the user's viewport, rather than loading all images at once when the page loads.
+
+### Lazy Loading in Python
+
+In Python, lazy loading is often implemented using **generators** and the `yield` keyword. Instead of generating all data at once, generators produce items one at a time and only when requested.
+
+- **Example:** A generator function that yields values one by one instead of returning a full list.
+  
+  ```python
+  def lazy_range(n):
+      for i in range(n):
+          yield i
+  ```
+
+  This function generates numbers up to `n` on demand, using minimal memory.
+
+### Lazy Loading in Iterators
+
+In iterators, lazy loading refers to the concept of generating or retrieving elements one at a time as you iterate over them, rather than loading the entire dataset into memory at once.
+
+- **Example:** Using the `yield` keyword in Python enables this lazy behavior. Each call to `next()` on an iterator fetches the next element, only when it’s requested.
+
+- **Efficiency:** This makes iterators particularly memory-efficient, especially for large or infinite sequences.
+
+### Summary
+
+- **General:** Lazy loading delays resource-intensive operations until they are necessary.
+- **Python:** Implemented via generators and `yield`, producing data on-demand.
+- **Iterators:** Elements are generated or fetched one-by-one as needed, saving memory and processing time.
