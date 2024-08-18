@@ -1,0 +1,5 @@
+Magic methods in Python, also known as dunder (double underscore) methods, 
+are special methods that have double underscores at the beginning and end 
+of their names. These methods are used to define the behavior of objects for 
+various built-in operations like arithmetic operations, comparison, string 
+representation, and more.
