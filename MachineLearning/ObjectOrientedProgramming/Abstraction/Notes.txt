@@ -1,0 +1,2 @@
+Hiding the complex implementation details and not showing the internal working 
+Reducing complexity of the code
